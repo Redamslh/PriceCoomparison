@@ -1,0 +1,48 @@
+<!-- Created By : Sangwin Gawande (http://sangw.in) -->
+
+<div class="w3-container" *ngIf="phoneAddForm">
+	<form class="w3-container" [formGroup]="phoneAddForm" (ngSubmit)=" onSubmit()">
+		<div class="w3-panel w3-round-small w3-teal">
+			<h3><span *ngIf="index === undefined">Phone Refill Add</span><span *ngIf="index != undefined">Phone Refill Update</span> <a routerLink="/" class="w3-button w3-green custom-button"><i class="w3-medium fa fa-chevron-left"></i> Back</a></h3>
+		</div>
+	
+			<label class="w3-text-blue"><i class="w3-medium custom-icon fa fa-user"></i><b>num</b></label>
+			<input class="w3-input w3-border" type="text" formControlName="num" id="num" required [(ngModel)]="phone.num">
+			<div class="w3-panel w3-red"  *ngIf="phoneAddForm.controls.num.invalid && (phoneAddForm.controls.num.dirty || phoneAddForm.controls.num.touched)">Please enter 3 to 50 characters</div> 
+	
+			<label class="w3-text-blue"><i class="w3-medium custom-icon fa fa-user"></i><b>type</b></label>
+			<input class="w3-input w3-border" type="text" formControlName="type"  id="type" required [(ngModel)]="phone.type" >
+			<div class="w3-panel w3-red"  *ngIf="phoneAddForm.controls.type.invalid && (phoneAddForm.controls.type.dirty || phoneAddForm.controls.type.touched)">Please enter  3 to 50 characters </div> 
+	
+			<label class="w3-text-blue"><i class="w3-medium custom-icon fa fa-envelope-o"></i><b>company</b></label>
+			<input class="w3-input w3-border" type="text" formControlName="company"  id="company"  required [(ngModel)]="phone.company">
+			<div class="w3-panel w3-red"  *ngIf="phoneAddForm.controls.company.invalid && (phoneAddForm.controls.company.dirty || phoneAddForm.controls.company.touched)">Please enter valid company</div> 
+	
+			<br>
+			<button class="w3-btn w3-blue" type="submit" [disabled]="!phoneAddForm.valid"><span *ngIf="index === undefined">Register</span><span *ngIf="index != undefined">Upcompany</span> <i class="w3-medium fa fa-check"></i> </button>
+	
+		</form>
+</div>
+<div class="w3-container" *ngIf="phoneUpForm">
+	<form class="w3-container" [formGroup]="phoneUpForm" (ngSubmit)="UpPhone()">
+	<div class="w3-panel w3-round-small w3-teal">
+		<h3><span *ngIf="index === undefined">Phone Refill Add</span><span *ngIf="index != undefined">Phone Refills Update</span> <a routerLink="/electList" class="w3-button w3-green custom-button"><i class="w3-medium fa fa-chevron-left"></i> Back</a></h3>
+	</div>
+
+		<label class="w3-text-blue"><i class="w3-medium custom-icon fa fa-user"></i><b>num</b></label>
+		<input class="w3-input w3-border" type="text" formControlName="num" id="num" >
+		<div class="w3-panel w3-red"  *ngIf="phoneUpForm.controls.num.invalid && (phoneUpForm.controls.num.dirty || phoneUpForm.controls.num.touched)">Please enter 3 to 50 characters</div> 
+
+		<label class="w3-text-blue"><i class="w3-medium custom-icon fa fa-user"></i><b>type</b></label>
+		<input class="w3-input w3-border" type="text" formControlName="type"  id="type" >
+		<div class="w3-panel w3-red"  *ngIf="phoneUpForm.controls.type.invalid && (phoneUpForm.controls.type.dirty || phoneUpForm.controls.type.touched)">Please enter  3 to 50 characters </div> 
+
+		<label class="w3-text-blue"><i class="w3-medium custom-icon fa fa-envelope-o"></i><b>company</b></label>
+        <input class="w3-input w3-border" type="text" formControlName="company"  id="company" >
+		<div class="w3-panel w3-red"  *ngIf="phoneUpForm.controls.company.invalid && (phoneUpForm.controls.company.dirty || phoneUpForm.controls.company.touched)">Please enter valid company</div> 
+
+        <br>
+		<button class="w3-btn w3-blue" type="submit" [disabled]="!phoneUpForm.valid"><span *ngIf="index === undefined">Register</span><span *ngIf="index != undefined">Update </span> <i class="w3-medium fa fa-check"></i> </button>
+
+	</form>
+</div>
