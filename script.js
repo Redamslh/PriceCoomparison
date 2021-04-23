@@ -1,4 +1,67 @@
+
 $( document ).ready(function() {
+  let aspectRatioGroup = document.querySelector('#aspectRatio--group .segmentedControl');
+let radios = aspectRatioGroup.querySelectorAll('input');
+let i = 1;
+
+// set CSS Var to number of radios we have
+aspectRatioGroup.style.setProperty('--options',radios.length);
+
+// loop through radio elements
+radios.forEach((input)=>{
+	// store position as data attribute
+	input.setAttribute('data-pos',i);
+	
+	// add click handler to change position
+	input.addEventListener('click',(e)=>{
+		aspectRatioGroup.style.setProperty('--options-active',e.target.getAttribute('data-pos'));
+	});
+	
+	// increment counter
+	i++;
+});
+
+$("#win").click(function() {
+ var station = document.getElementById("newSelect");
+ var prix = document.getElementById("prix");
+ var ville = document.getElementById("villeSelect");
+
+ ville.style.visibility = "hidden";
+ prix.style.visibility = "hidden";
+ station.style.visibility = "hidden";
+
+ document.getElementById("noinfo").innerHTML = "Pas d'information pour le moment"
+
+})
+
+$("#if").click(function() {
+  var station = document.getElementById("newSelect");
+  var prix = document.getElementById("prix");
+  var ville = document.getElementById("villeSelect");
+ 
+  ville.style.visibility = "hidden";
+  prix.style.visibility = "hidden";
+  station.style.visibility = "hidden";
+ 
+  document.getElementById("noinfo").innerHTML = "Pas d'information pour le moment"
+ 
+ })
+$("#tot").click(function() {
+  var station = document.getElementById("newSelect");
+  var prix = document.getElementById("prix");
+  var ville = document.getElementById("villeSelect");
+  var info = document.getElementById("noinfo");
+
+  ville.style.visibility = "visible";
+  prix.style.visibility = "visible";
+  station.style.visibility = "visible";
+
+  document.getElementById("noinfo").innerHTML = ""
+
+ 
+ })
+// add class to enable the sliding pill animation, otherwise it uses a fallback
+aspectRatioGroup.classList.add('useSlidingAnimation');
   var firebaseConfig = {
     apiKey: "AIzaSyBdr4MEdpY40GR1r_k85C03T-IM-F2R2n0",
     authDomain: "gprt-371c9.firebaseapp.com",
@@ -18,7 +81,7 @@ $( document ).ready(function() {
   var maxgaz = 0.0;
   var maxEssence = 0.0
   var maxExcelum = 0.0
-  
+
   var station1 = firebase.database().ref('Casablanca/');
   station1.on('value',(snapshot)=>{
       snapshot.forEach(function(snapshot1){
@@ -29,18 +92,22 @@ $( document ).ready(function() {
                 ess = snapshot3.val().sans_plomb
                 if(parseFloat(gaz) < mingaz){
                   mingaz = parseFloat(gaz);
+                  stationgz = snapshot1.key;
                 }
                 if(parseFloat(gaz) > maxgaz){
                   maxgaz = parseFloat(gaz);
                 }
                 if(parseFloat(spec) < minExcelum){
                   minExcelum = parseFloat(spec);
+                  stationex = snapshot1.key;
                 }
                 if(parseFloat(spec) > maxExcelum){
                   maxExcelum = parseFloat(spec);
                 }
                 if(parseFloat(ess) < minEssence){
                   minEssence = parseFloat(ess);
+                  stationes = snapshot1.key;
+
                 }
                 if(parseFloat(ess) > maxEssence){
                   maxEssence = parseFloat(ess);
@@ -52,11 +119,17 @@ $( document ).ready(function() {
           })
           
       })
-      document.getElementById("gazPrice").innerHTML = "<b>Gasoil:</b> "+mingaz+"DH - " + maxgaz+"DH"
-      document.getElementById("specPrice").innerHTML = "<b>Excellum:</b> "+minExcelum+"DH - " + maxExcelum+"DH"
-      document.getElementById("excePrice").innerHTML = "<b>Essence:</b> "+minEssence+"DH - " + maxEssence+"DH"
-  })
+      console.log("station" + stationgz + " gaz " + mingaz );
+      console.log("station" + stationex + " ex " + minExcelum );
+      console.log("station" + stationes + " ess " + minEssence );
+      document.getElementById("stgz").innerHTML = "CASABLANCA - " +stationgz;
+      document.getElementById("stes").innerHTML = "CASABLANCA - " +stationes;
+      document.getElementById("stex").innerHTML = "CASABLANCA - " + stationex
 
+      document.getElementById("pgz").innerHTML = mingaz + " DH";
+      document.getElementById("pex").innerHTML = minExcelum + " DH"
+      document.getElementById("pes").innerHTML = minEssence + " DH";
+  })
   
 
   newSelect = document.getElementById("newSelect")
@@ -113,5 +186,5 @@ $( document ).ready(function() {
         })
         
       });
-     
+    
 });

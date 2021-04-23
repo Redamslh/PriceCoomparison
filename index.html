@@ -26,6 +26,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/button.css" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
@@ -82,40 +83,64 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container-fluid" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Today Prices</h1>
+          <h1>Today Best Prices</h1>
       
           <h2 id="gazPrice"></h2>
           <h2 id="specPrice"></h2>
           <h2 id="excePrice"></h2>
           <div><a href="#pricing" class="btn-get-started scrollto">Check Prices</a></div>
         </div>
-        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_rdvdou18.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop  autoplay></lottie-player>
-          </div>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" >
+          <div class="card">
+            <input type="radio" name="select" id="slide_1" checked>
+            <input type="radio" name="select" id="slide_2">
+            <input type="radio" name="select" id="slide_3">
+            <input type="checkbox" id="slideImg">
+          
+            <div class="slider">
+              <label for="slide_1" class="slide slide_1 v" style="background-color:#ecc78d"></label>
+              <label for="slide_2" class="slide slide_2" style="background-color:#76ab91" ></label>
+              <label for="slide_3" class="slide slide_3" style="background-color:#b36f6f"></label>
+            </div>
+          
+            <div class="inner_part">
+              <div style="background-color : green ; height: 10px; width: auto;">
+              </div>
+              <div class="content content_1">
+                <div class="title" id="stgz"></div>
+                <div class="text" >
+                  Station Gazoil Best Price</div>
+                  <button class="button " id="btgz" type="button" data-hover="Visit"><span id="pgz"></span></button>              </div>
+            </div>
+          
+            <div class="inner_part">
+              <div class="content content_2">
+                <div class="title" id="stex"></div>
+                <div class="text">
+                  Station Excellum Best Price
+                </div>
+                <button class="button" id="btex" type="button" data-hover="Visit" data-active="I'M ACTIVE"><span id="pex" ></span></button>              </div>
+            </div>
+          
+            <div class="inner_part">
+              <div class="content content_3">
+                <div class="title" id="stes"></div>
+                <div class="text">
+                  Station Essence Best Price
+                </div>
+                <button class="button" id="btes" type="button" data-hover="Visit" data-active="I'M ACTIVE"><span id="pes"></span></button>              </div>
+            </div>
+          </div>          </div>
       </div>
+     
     </div>
-    <div class="Marquee">
-      <div class="Marquee-content">
-        <div class="Marquee-tag">1</div>
-        <div class="Marquee-tag">2</div>
-        <div class="Marquee-tag">3</div>
-        <div class="Marquee-tag">1</div>
-        <div class="Marquee-tag">2</div>
-        <div class="Marquee-tag">3</div>
-        <div class="Marquee-tag">1</div>
-        <div class="Marquee-tag">2</div>
-        <div class="Marquee-tag">3</div>
-        <div class="Marquee-tag">1</div>
-        <div class="Marquee-tag">2</div>
-        <div class="Marquee-tag">3</div>
-      </div>
-    </div>
+    
+
   </section><!-- End Hero -->
 
   <main id="main">
@@ -540,10 +565,33 @@
     <section id="pricing" class="pricing section-bg">
       <div class="container" data-aos="fade-up">
 
+
         <div class="section-title">
           <h2>Pricing</h2>
           <p></p>
-          
+          <div id="inputContainer">
+            <fieldset id="aspectRatio--group" class="inputGroup">
+              <legend class="label">Selectionner votre station</legend>
+              <div class="segmentedControl">
+                <span class="segmentedControl--group">
+                  <input type="radio" name="aspectRatio" id="tot" checked />
+                  <label class="label" for="tot">Total</label>
+                </span>
+                <span class="segmentedControl--group">
+                  <input type="radio" name="aspectRatio" id="if" />
+                  <label class="label" for="if">Ifriquia</label>
+                </span>
+                <span class="segmentedControl--group">
+                  <input type="radio" name="aspectRatio" id="win" />
+                  <label class="label" for="win">Winxu</label>
+                </span>
+              </div>
+            </fieldset>
+          </div>
+        </br>
+        <center>
+          <legend class="label" id="noinfo"></legend>
+        </center>
           <select class="form-control" id="villeSelect">
             <option disabled selected>Choisissez une ville</option>
           </select>
@@ -554,7 +602,7 @@
           </select>
         </div>
 
-        <div class="row">
+        <div class="row" id="prix">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
@@ -577,12 +625,15 @@
               
             </div>
           </div>
+      
+
 
           
 
         </div>
-
+ 
       </div>
+   
     </section><!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
