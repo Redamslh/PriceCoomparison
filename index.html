@@ -13,7 +13,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBsxwED2-IleVghZdQ1eDuqktveK33Rubg&libraries=places"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,11 +24,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
-  <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL708VcTQxf2tHswMYFCLuZsf6g2AMRck&libraries=&v=weekly"
-  async></script>
-  <!-- Template Main CSS File -->
+    <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
@@ -104,7 +100,22 @@
           </div>
       </div>
     </div>
-
+    <div class="Marquee">
+      <div class="Marquee-content">
+        <div class="Marquee-tag">1</div>
+        <div class="Marquee-tag">2</div>
+        <div class="Marquee-tag">3</div>
+        <div class="Marquee-tag">1</div>
+        <div class="Marquee-tag">2</div>
+        <div class="Marquee-tag">3</div>
+        <div class="Marquee-tag">1</div>
+        <div class="Marquee-tag">2</div>
+        <div class="Marquee-tag">3</div>
+        <div class="Marquee-tag">1</div>
+        <div class="Marquee-tag">2</div>
+        <div class="Marquee-tag">3</div>
+      </div>
+    </div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -112,19 +123,15 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
+        <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"
+      />
       
         <script>
-        var directionsDisplay;
-        var directionsService = new google.maps.DirectionsService();
-        var map;
-        function initialize() {
-          directionsDisplay = new google.maps.DirectionsRenderer();
-          var chicago = new google.maps.LatLng(41.850033, -87.6500523);
-          var mapOptions = { zoom:7, mapTypeId: google.maps.MapTypeId.ROADMAP, center: chicago }
-          map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-          directionsDisplay.setMap(map);
-        }
-        $(document).ready(function(e) { initialize() });
+
         </script>
         <div id="map_canvas" style="height: 354px; width:713px;"></div>
     </section><!-- End About Section -->
@@ -551,21 +558,21 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
-              <h3>Essence</h3>
+              <h3 id="es">Essence</h3>
               <h4 id="ess"></h4>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box ">
-              <h3>Gasoil</h3>
+              <h3 id="gz">Gasoil</h3>
               <h4 id="gaz"></h4>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
-              <h3>Excellum</h3>
+              <h3 id="sp">Excellum</h3>
               <h4 id="spe"></h4>
               
             </div>

@@ -1,13 +1,13 @@
 $( document ).ready(function() {
   var firebaseConfig = {
-    apiKey: "AIzaSyCoxNs54F1NzChdZnVZYqsolaMbW_6tRHE",
-    authDomain: "ionic-angular-32f4d.firebaseapp.com",
-    databaseURL: "https://ionic-angular-32f4d.firebaseio.com",
-    projectId: "ionic-angular-32f4d",
-    storageBucket: "ionic-angular-32f4d.appspot.com",
-    messagingSenderId: "310070479241",
-    appId: "1:310070479241:web:6c59d6e775db1626e4b958",
-    measurementId: "G-D07YJFZXT4"
+    apiKey: "AIzaSyBdr4MEdpY40GR1r_k85C03T-IM-F2R2n0",
+    authDomain: "gprt-371c9.firebaseapp.com",
+    databaseURL: "https://gprt-371c9-default-rtdb.firebaseio.com",
+    projectId: "gprt-371c9",
+    storageBucket: "gprt-371c9.appspot.com",
+    messagingSenderId: "1069373213441",
+    appId: "1:1069373213441:web:41ae35685e049901e8e900",
+    measurementId: "G-WQP16JMZ52"
   };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
