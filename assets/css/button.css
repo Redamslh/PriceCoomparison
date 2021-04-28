@@ -3,7 +3,8 @@
 #vbt{
     margin-left: 50px;
 }
-.button {
+
+on {
     display: inline-block;
     position: relative;
     margin: 1em;
