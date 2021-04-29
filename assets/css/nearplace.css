@@ -368,6 +368,35 @@
 .spinner2 > .rect:nth-child(5) {
     animation-delay: -0.4s;
 }
+.spin4 {
+  margin-top: 200px;
+  height: 36px;
+  display: flex;
+  margin-left: 600px;
+
+  flex-direction: row;
+}
+.spin4 > .rect {
+  background-color:#5846f9;
+  height: 100%;
+  width: 12px;
+  border-radius: 2px;
+  margin-right: 8px;
+  animation: stretchY 2s infinite ease-in-out;
+
+}
+.spin4 > .rect:nth-child(2) {
+  animation-delay: -1.6s;
+}
+.spin4 > .rect:nth-child(3) {
+  animation-delay: -1.2s;
+}
+.spin4 > .rect:nth-child(4) {
+  animation-delay: -0.8s;
+}
+.spin4 > .rect:nth-child(5) {
+  animation-delay: -0.4s;
+}
 .spinner3 {
     margin-top: 60px;
     width: 60px;

@@ -13,7 +13,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBsxwED2-IleVghZdQ1eDuqktveK33Rubg&libraries=places"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBN8HwI78UvmcbLxknMTjS9e1pKePM5nWE&libraries=places"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -214,7 +214,18 @@
         <div class="section-title">
           <h2>Best 6 Station Prices</h2>
         </div>
-        <div id="chartdiv"></div>
+          <div class="row"    id="loader2" style="display:none;">
+            <div class="spin4" >
+              <div class="rect"></div>
+              <div class="rect"></div>
+              <div class="rect"></div>
+              <div class="rect"></div>
+              <div class="rect"></div>
+            </div>
+          </div>
+     
+
+        <div id="chartdiv" ></div>
        
 
       </div>
@@ -352,7 +363,7 @@
             <input type="text" class="form-control" name="email" id="inp1" placeholder="Your Posistion" required>
             <div class="text-center" id="bt1" >
               <div class="checkbox-buttons-container1">
-                <input type="checkbox" id="bt2">
+                <input type="checkbox" id="bt2" required>
                 <label for="bt2"><i class="fa fa-map-marker"></i> Use My Position</label>
               </div>
             </div>
@@ -363,15 +374,17 @@
    
 
       </br>
+      <div id="distcho">
       <center>
         <h5>
           Distance
         </h5>
 </center>
-        <div class="range-slider" data-start="0" data-end="100"></div>
+        <div class="range-slider" data-start="0" data-end="100" ></div>
               </div>
 
           </br>
+          <div id="typcho">
             <center>
               <h5>
                 Type
@@ -386,6 +399,8 @@
               <input type="radio" name="name"  id="bex" />Excellum
           </button>
         </center>
+      </div>
+
         <center>
         </br>
 
@@ -453,28 +468,28 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Accelerate gently.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>Tip 1</h4>
+                <p>Accelerate gently</p>
               </div>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/Accelerate gently.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="tip1-details.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Maintain a steady speed.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Tip 2</h4>
+                <p>Maintain a steady speed</p>
               </div>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/Maintain a steady speed.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Tip2-details.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>

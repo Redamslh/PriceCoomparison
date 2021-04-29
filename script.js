@@ -218,10 +218,11 @@ console.log(formatDate())
           resolve => setTimeout(resolve, ms)
         );
       }
+
       
       async function delayedGreeting() {
-        await sleep(8000);
-        
+   
+
         am4core.ready(function() {
 
           // Themes begin
@@ -312,7 +313,13 @@ console.log(formatDate())
           }); // end am4core.ready()
       }
       
-      delayedGreeting();
+      $('#loader2').css('display', 'block');
+      setTimeout(removeLoader, 5000);
+      function removeLoader(){
+        $( "#loader2" ).fadeOut(500, function() {
+          delayedGreeting();
+        })
+      }
       
        
 });

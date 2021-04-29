@@ -59,16 +59,36 @@ jQuery(document).ready(function($) {
       var i = 0 
       $('#CheckboxButton1').on('click', function() {
         if(near){
+            $('#distcho').css('display', 'block');
+            $('#typcho').css('display', 'block');
           near=false
-        }else{
+        }
+        else{
+          if(chep){
+            $('#distcho').css('display', 'block');
+            $('#typcho').css('display', 'block');
+          }else{
+            $('#distcho').css('display', 'none');
+            $('#typcho').css('display', 'none');
+          }
           near=true
         }
     })
     $('#CheckboxButton2').on('click', function() {
       if(chep){
+        if(near){
+          $('#distcho').css('display', 'none');
+          $('#typcho').css('display', 'none');
+        }else{
+          $('#distcho').css('display', 'block');
+          $('#typcho').css('display', 'block');
+        }
         chep=false
       }   
       else{
+       
+          $('#distcho').css('display', 'block');
+          $('#typcho').css('display', 'block');
         chep=true
       }
   })
@@ -103,6 +123,7 @@ jQuery(document).ready(function($) {
               }
               document.getElementById("box").innerHTML = "Cheapest Station"
             }else if(near & !chep){
+              
               document.getElementById("box").innerHTML = "Nearest Station"
               document.getElementById("prixgaz").innerHTML = nearstation
             }
@@ -126,13 +147,18 @@ jQuery(document).ready(function($) {
     }
     var cnt = false;
     $('#bt3').on('click', function() {
-      if(cnt){
-      $('#stationcard').css('display', 'none');
-      cnt = false;
+      if(!near && !chep ){
+        alert("Please choose an option")
+      }else{
+        if(cnt){
+          $('#stationcard').css('display', 'none');
+          cnt = false;
+          }
+            $('#loader').css('display', 'block');
+            setTimeout(removeLoader, 5000);
+            getLocation();
       }
-        $('#loader').css('display', 'block');
-        setTimeout(removeLoader, 5000);
-        getLocation();
+     
          
     })
 
