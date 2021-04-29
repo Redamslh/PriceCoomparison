@@ -96,22 +96,22 @@ aspectRatioGroup.classList.add('useSlidingAnimation');
     return [day, month, year].join('-');
 }
 console.log(formatDate())
- var stationrepeat="";
+
   var station1 = firebase.database().ref('Casablanca/');
 
   station1.on('value',(snapshot)=>{
       snapshot.forEach(function(snapshot1){
           snapshot1.forEach(function(snapshot2){
 
-              snapshot2.forEach(function(snapshot3){
-                gaz = snapshot3.val().gasoil
-                spec = snapshot3.val().excellum
-                ess = snapshot3.val().sans_plomb
+              
+                gaz = snapshot2.val().gasoil
+                spec = snapshot2.val().excellum
+                ess = snapshot2.val().sans_plomb
                 if(snapshot2.key == formatDate()){
-                  if(stationrepeat!=snapshot1.key){
-                    dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess)})
-                  }
-                  stationrepeat = snapshot1.key;
+                  
+                  dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess), value4:(parseFloat(gaz)+parseFloat(ess)+parseFloat(spec))/3})
+                  
+            
                   
                 }
 
@@ -137,7 +137,7 @@ console.log(formatDate())
                 if(parseFloat(ess) > maxEssence){
                   maxEssence = parseFloat(ess);
                 }
-              })
+              
             
             
 
@@ -198,14 +198,14 @@ console.log(formatDate())
         station.once('value',(snapshot)=>{
             snapshot.forEach(function(snapshot1){
               if(snapshot1.key != "coordonnee"){
-                snapshot1.forEach(function(snapshot2){
-                  gaz = snapshot2.val().gasoil
-                  spec = snapshot2.val().excellum
-                  ess = snapshot2.val().sans_plomb
+           
+                  gaz = snapshot1.val().gasoil
+                  spec = snapshot1.val().excellum
+                  ess = snapshot1.val().sans_plomb
                   gazoil.innerHTML = '<sup>DH</sup>'+gaz
                   special.innerHTML = '<sup>DH</sup>'+spec
                   essence.innerHTML = '<sup>DH</sup>'+ess
-              })
+              
               }
             
                 

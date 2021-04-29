@@ -199,21 +199,15 @@ function getStation (){
          snapshot.forEach(function(snapshot1){
              snapshot1.forEach(function(snapshot2){
    
-                 snapshot2.forEach(function(snapshot3){
+                 
                   if(snapshot2.key != "coordonnee"){
-                   gaz = snapshot3.val().gasoil
-                   spec = snapshot3.val().excellum
-                   ess = snapshot3.val().sans_plomb
+                   gaz = snapshot2.val().gasoil
+                   spec = snapshot2.val().excellum
+                   ess = snapshot2.val().sans_plomb
       
                   }
                    else{
-                    if(snapshot2.key == formatDate()){
-                      if(stationrepeat!=snapshot1.key){
-                        dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess)})
-                      }
-                      stationrepeat = snapshot1.key;
-                      
-                    }
+                   
     
                     if(parseFloat(gaz) < mingaz && calcCrow(lat,lng,snapshot2.val().lat,snapshot2.val().long) < distchosen){
                       console.log("dazete " + snapshot1.key + " dit : " + distchosen)
@@ -261,7 +255,7 @@ if(meaness <nearcheappriceess){
 
                    }
                    
-                 })
+                 
                
                
    
