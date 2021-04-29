@@ -4,6 +4,14 @@ var dataGaz = new Array();
 let aspectRatioGroup = document.querySelector('#aspectRatio--group .segmentedControl');
 let radios = aspectRatioGroup.querySelectorAll('input');
 let i = 1;
+function sort_by_key(array, key)
+{
+ return array.sort(function(a, b)
+ {
+  var x = a[key]; var y = b[key];
+  return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+ });
+}
 
 // set CSS Var to number of radios we have
 aspectRatioGroup.style.setProperty('--options',radios.length);
@@ -110,9 +118,6 @@ console.log(formatDate())
                 if(snapshot2.key == formatDate()){
                   
                   dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess), value4:(parseFloat(gaz)+parseFloat(ess)+parseFloat(spec))/3})
-                  
-            
-                  
                 }
 
                 if(parseFloat(gaz) < mingaz){
@@ -222,15 +227,15 @@ console.log(formatDate())
       
       async function delayedGreeting() {
    
-
+        
+        sort_by_key(dataGaz,'value4')
+        for (let index = 0; index < dataGaz.length; index++) {
+          delete dataGaz[index]['value4']
+          
+        }
         am4core.ready(function() {
-
-          // Themes begin
+          
           am4core.useTheme(am4themes_animated);
-          // Themes end
-          
-          
-          
           var chart = am4core.create('chartdiv', am4charts.XYChart)
           chart.colors.step = 2;
           
