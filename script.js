@@ -110,13 +110,10 @@ console.log(formatDate())
   station1.on('value',(snapshot)=>{
       snapshot.forEach(function(snapshot1){
           snapshot1.forEach(function(snapshot2){
-
-              
                 gaz = snapshot2.val().gasoil
                 spec = snapshot2.val().excellum
                 ess = snapshot2.val().sans_plomb
                 if(snapshot2.key == formatDate()){
-                  
                   dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess), value4:(parseFloat(gaz)+parseFloat(ess)+parseFloat(spec))/3})
                 }
 
@@ -202,14 +199,17 @@ console.log(formatDate())
         var station = firebase.database().ref(villeSelected+'/'+this.value);
         station.once('value',(snapshot)=>{
             snapshot.forEach(function(snapshot1){
-              if(snapshot1.key != "coordonnee"){
-           
+              
+              if(snapshot1.key ==formatDate()){
+                
                   gaz = snapshot1.val().gasoil
                   spec = snapshot1.val().excellum
                   ess = snapshot1.val().sans_plomb
                   gazoil.innerHTML = '<sup>DH</sup>'+gaz
                   special.innerHTML = '<sup>DH</sup>'+spec
                   essence.innerHTML = '<sup>DH</sup>'+ess
+                
+                  
               
               }
             

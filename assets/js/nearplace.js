@@ -198,13 +198,13 @@ function getStation (){
      station1.on('value',(snapshot)=>{
          snapshot.forEach(function(snapshot1){
              snapshot1.forEach(function(snapshot2){
-   
+                
                  
-                  if(snapshot2.key != "coordonnee"){
+                  if(snapshot2.key != "coordonnee" && snapshot2.key == formatDate()){
                    gaz = snapshot2.val().gasoil
                    spec = snapshot2.val().excellum
                    ess = snapshot2.val().sans_plomb
-      
+                 
                   }
                    else{
                    
