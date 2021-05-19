@@ -14,7 +14,7 @@
   }
   
   .checkbox-buttons-container label:not(:last-child) {
-    margin-right: 16px;
+    margin-right: auto;
   }
   
   .checkbox-buttons-container label:hover {
@@ -83,4 +83,24 @@
     top: -16px;
     right: -16px;
   }
-  
+  @media screen and (min-width: 360px){
+    .checkbox-buttons-container label {
+      padding: 8px 10px;
+      border: 2px solid#5846f9;
+      border-radius: 5px;
+      color: #5846f9;
+      display: inline-block;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .checkbox-buttons-container label {
+      padding:2px 2px 2px 2px;
+      border: 2px solid#5846f9;
+      border-radius: 5px;
+      color: #5846f9;
+      display: inline-block;
+      position: relative;
+    }
+  }
+ 

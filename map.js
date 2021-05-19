@@ -264,8 +264,8 @@ $(document).ready(function () {
     console.log("ressset")
     directionsDisplay.setMap(null);
     directionsDisplay.setMap(null);
-
     clearMarkers()
+    reset();
     })
   
 
@@ -282,7 +282,9 @@ $(document).ready(function () {
       //calculateRoute($("#txtFrom").val(), $("#txtTo").val()); // draw the road from to 
 
   });
+ 
 });
+
 
 function TextToCoord(add) {
   
@@ -537,6 +539,10 @@ const marker = new google.maps.Marker({
 */
 console.log("hereeeeeeeeeeee"  + wayptst)
 return wayptst
+
+}
+function reset(){
+  $("#txtFrom").val('') ;
 
 }
 /*
