@@ -109,53 +109,55 @@ var lat , lng
   station1.on('value',(snapshot)=>{
       snapshot.forEach(function(snapshot1){
           snapshot1.forEach(function(snapshot2){
-            if(snapshot2.key =="coordonnee"){
-              lat = snapshot2.val().lat
-              lng = snapshot2.val().long
-            }
-            else if(snapshot2.key == formatDate()){
+            if(snapshot2.key == formatDate()){
               gaz = snapshot2.val().gasoil
               spec = snapshot2.val().excellum
               ess = snapshot2.val().sans_plomb
+                dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess), value4:(parseFloat(gaz)+parseFloat(ess)+parseFloat(spec))/3})
+              
+            }
+            else{
+              lat = snapshot2.val().lat
+              lng = snapshot2.val().long
             
              
-                if(snapshot2.key == formatDate()){
-                  dataGaz.push({category:snapshot1.key,value1:parseFloat(gaz),value2:parseFloat(spec),value3: parseFloat(ess), value4:(parseFloat(gaz)+parseFloat(ess)+parseFloat(spec))/3})
-                }
-
-                if(parseFloat(gaz) < mingaz){
-                  var s= document.getElementById("btgz");
-                  mingaz = parseFloat(gaz);
-                  s.value = lat + '_' + lng  + " _ " + snapshot1.key + "_" + mingaz
-                  stationgz = snapshot1.key;
-                }
-                if(parseFloat(gaz) > maxgaz){
-                  maxgaz = parseFloat(gaz);
-                }
-                if(parseFloat(spec) < minExcelum){
-                  var s= document.getElementById("btex");
-                  minExcelum = parseFloat(spec);
-                  s.value = lat + '_' + lng  + " _ " + snapshot1.key + "_" + minExcelum
-                  stationex = snapshot1.key;
-                }
-                if(parseFloat(spec) > maxExcelum){
-                  maxExcelum = parseFloat(spec);
-                }
-                if(parseFloat(ess) < minEssence){
-                  var s= document.getElementById("btes");
-                  minEssence = parseFloat(ess);
-                  s.value = lat + '_' + lng  + " _ " + snapshot1.key + "_" + minEssence
-                  stationes = snapshot1.key;
-
-                }
-                if(parseFloat(ess) > maxEssence){
-                  maxEssence = parseFloat(ess);
-                }
-              
+         
             
               }
 
           })
+              
+
+          if(parseFloat(gaz) < mingaz){
+            var s= document.getElementById("btgz");
+            mingaz = parseFloat(gaz);
+            s.value = lat + '_' + lng  + " _ " + snapshot1.key + "_" + mingaz
+            stationgz = snapshot1.key;
+          }
+          if(parseFloat(gaz) > maxgaz){
+            maxgaz = parseFloat(gaz);
+          }
+          if(parseFloat(spec) < minExcelum){
+            var s= document.getElementById("btex");
+            minExcelum = parseFloat(spec);
+            s.value = lat + '_' + lng  + " _ " + snapshot1.key + "_" + minExcelum
+            stationex = snapshot1.key;
+          }
+          if(parseFloat(spec) > maxExcelum){
+            maxExcelum = parseFloat(spec);
+          }
+          if(parseFloat(ess) < minEssence){
+            var s= document.getElementById("btes");
+            minEssence = parseFloat(ess);
+            s.value = lat + '_' + lng  + " _ " + snapshot1.key + "_" + minEssence
+            stationes = snapshot1.key;
+
+          }
+          if(parseFloat(ess) > maxEssence){
+            maxEssence = parseFloat(ess);
+          }
+        
+
           
       })
       
