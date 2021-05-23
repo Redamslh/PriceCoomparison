@@ -47,7 +47,7 @@ on {
     -moz-transform: translate(-150%, 0);
     -ms-transform: translate(-150%, 0);
     -o-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
+    transform: translate(-20%, 0);
 }
 /* :after */
 .button:after {
