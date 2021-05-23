@@ -1,0 +1,276 @@
+*, :before, :after {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+#ff{
+	margin-top: 25px;
+	margin-left: 10px;
+
+width: 200px;
+height: 100px;
+background-color: red;
+}
+#gg{
+	margin-top: 20px;
+	margin-bottom: 70px;
+    /* margin-right: 1px; */
+    margin-left: 600px;
+	
+}
+
+#clk22{
+	bottom: 200px;
+    right: 8000px;
+  	font: 700 35px monospace;
+	width: 128px;
+	height: 64px;
+	display: flex;
+	position: relative;
+	background: red;
+	border-radius: 8px;
+	color: RGB(255,255,255);
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease;
+
+}
+.clock {
+	width: 150px;
+	height: 64px;
+	display: flex;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: auto;
+	flex-direction: row;
+	transition: all 0.5s ease;
+}
+
+.clock .container {
+    bottom: 200px;
+    right: 570px;
+  	font: 700 35px monospace;
+	width: 128px;
+	height: 64px;
+	display: flex;
+	position: relative;
+	background: #4638c7;
+	border-radius: 8px;
+	color: RGB(255,255,255);
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease;
+}
+
+.clock .container:hover {
+	border-radius: 75%;
+  box-shadow: 0px 0px 64px RGBA(255,0,128,0.5);
+	transform: rotate(360deg) scale(0.75);
+}
+
+.clock .container:nth-child(1) {
+	margin: 0px 16px 0px 0px;
+}
+
+.clock .container:nth-child(2) {
+	margin: 0px 16px 0px 16px;
+}
+
+.clock .container:nth-child(3) {
+	margin: 0px 0px 0px 16px;
+}
+
+.clock1 {
+    width: 50px;
+    height: 64px;
+    display: flex;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    bottom: 0px;
+    left: 770px;
+    margin: auto;
+    flex-direction: row;
+    transition: all 0.5s ease;
+}
+
+.clock1 .container {
+	bottom: 200px;
+    right: 500px;
+    font: 700 25px monospace;
+    width: 64px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    background: black;
+    border-radius: 8px;
+    color: RGB(255,255,255);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.clock1 .container:hover {
+	border-radius: 75%;
+  box-shadow: 0px 0px 64px RGBA(255,0,128,0.5);
+	transform: rotate(360deg) scale(0.75);
+}
+
+.clock1 .container:nth-child(1) {
+	margin: 0px 16px 0px 0px;
+}
+
+.clock1 .container:nth-child(2) {
+	margin: 0px 16px 0px 16px;
+}
+
+.clock1 .container:nth-child(3) {
+	margin: 0px 0px 0px 16px;
+}
+.app {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.app .card {
+	width: 1150px;
+	height: 500px;
+	background: #fff;
+	border-radius: 14px;
+   /* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.app .card .card-contents {
+	padding: 5%;
+}
+.app .card .card-contents .card-title {
+	font-size: 28px;
+	font-weight: bold;
+}
+.app .card .card-contents .options-group {
+	display: flex;
+	margin-top: 20px;
+}
+.app .card .card-contents .options-group form {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.app .card .card-contents .options-group form .row {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin: 20px 0px;
+}
+.app .card .card-contents .options-group form .row .selected {
+	background: #ebedf7;
+	border-radius: 5px;
+}
+.app .card .card-contents .options-group form .row .form-group {
+	display: flex;
+	min-width: 333px;
+	min-height: 88px;
+	justify-content: flex-start;
+}
+.app .card .card-contents .options-group form .row .form-group input {
+	display: none;
+}
+.app .card .card-contents .options-group form .row .form-group input:checked + label {
+	position: relative;
+}
+.app .card .card-contents .options-group form .row .form-group input:checked + label:after {
+	content: "";
+	display: flex;
+	position: absolute;
+	border: solid #fff;
+	top: 36px;
+	left: 51px;
+	width: 4px;
+	height: 10px;
+	border-width: 0px 3px 3px 0px;
+	transform: rotate(45deg);
+}
+.app .card .card-contents .options-group form .row .form-group input:checked + label:before {
+	background-color: #7e6ee1;
+	border: 3px solid #7e6ee1;
+}
+.app .card .card-contents .options-group form .row .form-group label {
+	display: flex;
+	align-items: center;
+	color: #000;
+	font-size: 1rem;
+}
+.app .card .card-contents .options-group form .row .form-group label .label-group {
+	min-height: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.app .card .card-contents .options-group form .row .form-group label:before {
+	content: "";
+	position: relative;
+	background-color: #fff;
+	border: 3px solid #8f94a1;
+	border-radius: 4px;
+	padding: 12px;
+	margin: 0px 30px 0px 40px;
+	display: inline-flex;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.app .card .card-contents .options-group form .row .form-group label .title {
+	font-size: 20px;
+}
+.app .card .card-contents .options-group form .row .form-group label .description {
+	font-size: 16px;
+}
+.app .card .card-contents .email-form {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+.app .card .card-contents .email-form input[type="text"] {
+	display: flex;
+	text-align: left;
+	width: 480px;
+	height: 70px;
+	border: 1px solid #8f94a1;
+	border-radius: 12px;
+	font-size: 18px;
+	box-sizing: border-box;
+	padding-left: 24px;
+}
+.app .card .card-contents .email-form input[type="text"]:focus {
+	outline: none !important;
+}
+.app .card .card-contents .email-form .email-button {
+	margin-left: 20px;
+}
+.app .card .card-contents .email-form .email-button button {
+	padding: 25px 80px;
+	border-radius: 10px;
+	background: #7e6ee1;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+}
+.app .card .card-contents .email-form .email-button .ripple {
+	background-position: center;
+	transition: background 1s;
+}
+.app .card .card-contents .email-form .email-button .ripple:hover {
+	background: #7e6ee1 radial-gradient(circle, transparent 1%, #3a3875 1%) center/15000%;
+}
+.app .card .card-contents .email-form .email-button .ripple:active {
+	background-color: #3a3875;
+	background-size: 100%;
+	transition: background 0s;
+}
+.app .card .card-contents .email-form .email-button .ripple:focus {
+	outline: none !important;
+}

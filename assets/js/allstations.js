@@ -47,8 +47,8 @@ $('#Allstation').on('click', function() {
                         '<div id="siteNotice">' +
                         
                         "</div>" +
-                        '<h4 id="firstHeading" class="firstHeading">'+ snapshot1.key + '</h4>' +
-                    '<div style="background-color : #aadaff ; width : 100% ; height : 5px" ></div>' + "<div> Gazoil  :" +   gaz + "  \n"+  "Exceuilium "+ spec + " \n  Essence" +  ess+ " DH" + 
+                        '<h6 id="firstHeading" class="firstHeading">'+ snapshot1.key + '</h6>' +
+                    "<div > <span style='color:orange ; font-weight: bold;' >Gazoil</span>  :" +   "<span style='font-weight: bold;' >" + gaz + " DH</span>"  + " <br>"+  "<span style='color:green ; font-weight: bold;' >Exceuilium</span>  "+ "<span style='font-weight: bold;' >" + "<span style='font-weight: bold;' >" + spec + " DH</span>"  + " <br> " + "<span style='color:red ; font-weight: bold;' >Essence</span>  " + "<span style='font-weight: bold;' >" + ess + " DH</span>" + " DH" + 
                     '</div>'
                     +
                         "</div>";

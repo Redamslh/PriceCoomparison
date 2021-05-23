@@ -32,7 +32,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/button.css" rel="stylesheet">
   <link href="assets/css/box.css" rel="stylesheet">
-
+  <link href="assets/css/time.css" rel="stylesheet">
   <link href="assets/css/Cards.css" rel="stylesheet">
   <link href="assets/css/nearplace.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -68,14 +68,16 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+          <li>       <img class="fit-picture"
+            src="./assets/img/ensa-jadida.png"
+            alt="Grapefruit slice atop a pile of other slices" width="250px" height="150px" style="margin-right: 500px;"></li>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">Map</a></li>
           <li><a class="nav-link scrollto" href="#services">Stats</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Real Time Pricing</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Tips</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Nearest/Cheapest Station</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -93,10 +95,22 @@
           <h2 id="gazPrice"></h2>
           <h2 id="specPrice"></h2>
           <h2 id="excePrice"></h2>
-          <div><a href="#pricing" class="btn-get-started scrollto">Check Prices</a></div>
+          <div><a href="#pricing" class="btn-get-started scrollto">Check Today's Prices in Real time Mode</a></div>
+ 
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" >
           <div class="card">
+              <div class="clock1"  >
+                <div class="container" style="padding-top: 0px;">
+                  <span class="hours">00</span>
+                </div>
+                <div class="container" style="padding-top: 0px;">
+                  <span class="minutes">00</span>
+                </div>
+                <div class="container" style="padding-top: 0px;">
+                  <span class="seconds">00</span>
+                </div>
+            </div>
             <input type="radio" name="select" id="slide_1" checked>
             <input type="radio" name="select" id="slide_2">
             <input type="radio" name="select" id="slide_3">
@@ -253,7 +267,41 @@
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
+        <div id="top">
+          <a id="logo" >
+            <img class="fit-picture"
+            src="./assets/img/ensa-jadida.png"
+            alt="Grapefruit slice atop a pile of other slices" width="250px" height="150px" style="margin-right: 500px;">
+                    </a>
+                    <img class="fit-picture" id="fb"
+                    src="./assets/img/tri.png"
+                    alt="Grapefruit slice atop a pile of other slices" width="250px" height="150px" style="margin-right: 500px;">      </div>
+        <style>
 
+      #fb {
+        float: left;
+    position: absolute;
+    display: inline;
+    width: 100px;
+    bottom: 15px;
+    left: 1150px;
+    height: 100px;
+}
+
+#logo {
+    bottom: 0;
+    display: inline;
+    left: 0;
+    position: absolute;
+}
+
+#top {
+    height: 58px;
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+}
+          </style>
         <div class="section-title">
           <h2>Fuel-efficient driving techniques</h2>
           <p>Fuel-efficient driving can save you hundreds of dollars in fuel each year, improve road safety and prevent wear on your vehicle. Adopt these 5 fuel-efficient driving techniques to lower your vehicle’s fuel consumption and carbon dioxide emissions by as much as 25%.</p>
@@ -263,7 +311,9 @@
           <div id="card-container">
     
             <div class="main">
+         
                 <div class="front">
+            
                   <img class="fit-picture" id="i"
                   src="./assets/img/apple-tips.png"
                   alt="Grapefruit slice atop a pile of other slices" width="200px" height="150px">
@@ -357,14 +407,22 @@
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="fade-up">
-
+        <div id="top">
+          <a id="logo" >
+            <img class="fit-picture"
+            src="./assets/img/ensa-jadida.png"
+            alt="Grapefruit slice atop a pile of other slices" width="250px" height="150px" style="margin-right: 500px;">
+                    </a>
+                    <img class="fit-picture" id="fb"
+                    src="./assets/img/tri.png"
+                    alt="Grapefruit slice atop a pile of other slices" width="250px" height="150px" style="margin-right: 500px;">      </div>
+                    
         <div class="section-title">
           <h2>Nearest/Cheapest Station</h2>
           <p>Set your option and get the best station for you </p>
         </div>
 
         <center>
-
         <div >
           <div class="checkbox-buttons-container">
             <input type="checkbox" id="CheckboxButton1">
@@ -624,8 +682,18 @@
 
 
         <div class="section-title">
-          <h2>Pricing</h2>
-          <p></p>
+          <h2>Real Time Pricing</h2>
+          <div class="clock">
+            <div class="container">
+              <span class="hours1">00</span>
+            </div>
+            <div class="container">
+              <span class="minutes1">00</span>
+            </div>
+            <div class="container">
+              <span class="seconds1">00</span>
+            </div>
+          </div>
           <div id="inputContainer">
             <fieldset id="aspectRatio--group" class="inputGroup">
               <legend class="label">Choose Your GazStation</legend>
@@ -924,6 +992,7 @@
   <script src="assets/js/main.js"></script>
   <script src="./script.js"></script>
   <script src="./map.js"></script>
+  <script src="./assets/js/time.js"></script>
   <script src="./assets/js/nearplace.js"></script>
   <script src="./assets/js/allstations.js"></script>
 

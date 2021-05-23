@@ -121,17 +121,16 @@ var end,start
         alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
       }
     });
-    const contentString =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    
-    "</div>" +
-    '<h4 id="firstHeading" class="firstHeading">'+ st + '</h4>' +
-'<div style="background-color : #aadaff ; width : 100% ; height : 5px" ></div>' + 
-'<div ><i class="fa fa-road" aria-hidden="true"></i>  distance : ' + parseFloat(calcCrow(lat,lng,ltgz,lnggz)).toFixed( 2 ) + 'km</div>'
-+ '<div ><i class="fa fa-money" aria-hidden="true"></i>Price : '  +  pr + " DH" + '</div>'
-+
-    "</div>";
+      const contentString =
+                        '<div id="content">' +
+                        '<div id="siteNotice">' +
+                        
+                        "</div>" +
+                        '<h6 id="firstHeading" class="firstHeading">'+ st + '</h6>' +
+                    "<div > <span style='color:orange ; font-weight: bold;' >Gazoil</span>  :" +   "<span style='font-weight: bold;' >" + gaz + " DH</span>"  + " <br>"+  "<span style='color:green ; font-weight: bold;' >Exceuilium</span>  "+ "<span style='font-weight: bold;' >" + "<span style='font-weight: bold;' >" + spec + " DH</span>"  + " <br> " + "<span style='color:red ; font-weight: bold;' >Essence</span>  " + "<span style='font-weight: bold;' >" + ess + " DH</span>" + " DH" + 
+                    '</div>'
+                    +
+                        "</div>";
   const infowindow = new google.maps.InfoWindow({
     content: contentString,
   });
@@ -374,10 +373,12 @@ function getnearstinfo(addfrom,addto){
       '<div id="siteNotice">' +
       
       "</div>" +
-      '<h4 id="firstHeading" class="firstHeading">'+ snapshot1.key + '</h4>' +
-      '<div style="background-color : #aadaff ; width : 100% ; height : 5px" ></div>' + 
-      '<div style="background-color : #aadaff ; width : 100% ; height : 5px" ></div>' + "<div> Gazoil  :" +   gaz + "  \n"+  "Exceuilium "+ spec + " \n  Essence" +  ess+ " DH" + 
+      '<h6 id="firstHeading" class="firstHeading">'+ snapshot1.key + '</h6>' +
+  "<div > <span style='color:orange ; font-weight: bold;' >Gazoil</span>  :" +   "<span style='font-weight: bold;' >" + gaz + " DH</span>"  + " <br>"+  "<span style='color:green ; font-weight: bold;' >Exceuilium</span>  "+ "<span style='font-weight: bold;' >" + "<span style='font-weight: bold;' >" + spec + " DH</span>"  + " <br> " + "<span style='color:red ; font-weight: bold;' >Essence</span>  " + "<span style='font-weight: bold;' >" + ess + " DH</span>" + " DH" + 
+  '</div>'
+  +
       "</div>";
+
       const infowindow = new google.maps.InfoWindow({
       content: contentString,
       });
