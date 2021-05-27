@@ -7,10 +7,11 @@
 
 L'utilisateur choisit la ville et la station voulue et i recoit en temps reel les prix de cette station.
 
-<img src="./assets/img/pageAccueil.png">
+![ScreenShot](./assets/img/pageAccueil.png)
+
 
 > Affichge des Prix en temps reel
 
 L'utilisateur choisit la ville et la station voulue et i recoit en temps reel les prix de cette station.
 
-<img src="./assets/img/ensemblePrix.png">
+![ScreenShot](./assets/img/ensemblePrix.png)
