@@ -15,9 +15,7 @@ pip install httplib
 
 pip install schedule
 ```
-**Telecharger chromedriver via le lien**
-
-[chromedriver](https://chromedriver.chromium.org/downloads)
+**Telecharger chromedriver via le lien** [chromedriver](https://chromedriver.chromium.org/downloads)
 
 ```python
 def getData():
