@@ -7,7 +7,7 @@
 
 L'utilisateur choisit la ville et la station voulue et i recoit en temps reel les prix de cette station.
 
-<img src="./assets/img/pageAccueil.png" width="300" height="200">
+<img src="https://github.com/Redamslh/PriceCoomparison/blob/master/assets/img/pageAccueil.PNG" width="300" height="200">
 
 > Affichge des Prix en temps reel
 
