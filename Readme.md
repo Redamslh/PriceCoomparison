@@ -1,8 +1,31 @@
 # Pricecomparaison
 <img src="./assets/img/pompe.png" width="100">
 
-**Cette Application web permet la Comparaison des Prix des Carburants en Temps Réel.Les données sont issues en utilisant le WebScraping**
+**Cette Application web permet la Comparaison des Prix des Carburants en Temps Réel.Les données sont issues en utilisant le WebScraping
+D'abord lancer le fichier Python scrapping.py, Vous devez tout d'abord ajouter les bibliotheques par les commandes suivantes pour lancer ce fichier :**
+
+``` bach 
+pip install selenium 
+
+pip install firebase 
+
+pip install schedule
+
+pip install httplib
+
+pip install schedule
+```
+**Telecharger chromedriver via le lien**
+
+[chromedriver](https://chromedriver.chromium.org/downloads)
+
+```python
+def getData():
+  driver = webdriver.Chrome("mettez path vers chromedriver.exe")
+```
+
 ## Les fonctionnalités principales
+
 > Page d'accueil
 
 La page d'accueil contient une carte dans laquelle se trouve les meilleures stations au niveau des prix pour les trois types des carburants.
