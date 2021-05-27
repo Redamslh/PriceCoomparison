@@ -10,7 +10,7 @@ La page d'accueil contient une carte dans laquelle se trouve les meilleures stat
 
 <img src="https://github.com/Redamslh/PriceCoomparison/blob/master/assets/img/pageAccueil.PNG" width="500">
 
-<img src="https://github.com/Redamslh/PriceCoomparison/blob/master/assets/img/pageAccueil.PNG" width="300" height="200">
+
 
 
 > Affichge des Prix en temps reel
