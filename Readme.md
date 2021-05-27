@@ -2,7 +2,7 @@
 <img src="./assets/img/pompe.png" width="100">
 
 **Cette Application web permet la Comparaison des Prix des Carburants en Temps Réel.Les données sont issues en utilisant le WebScraping
-D'abord lancer le fichier Python scrapping.py, Vous devez tout d'abord ajouter les bibliotheques par les commandes suivantes pour lancer ce fichier :**
+Avant de lancer le fichier Python scrapping.py pour recuperer les donnees, Vous devez tout d'abord ajouter les bibliotheques par les commandes suivantes pour lancer ce fichier :**
 
 ``` bach 
 pip install selenium 
