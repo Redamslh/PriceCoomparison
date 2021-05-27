@@ -263,8 +263,11 @@ var lat , lng
             xAxis.renderer.cellStartLocation = 0.1
             xAxis.renderer.cellEndLocation = 0.9
             xAxis.renderer.grid.template.location = 0;
-            
+            xAxis.title.text = "Station";
+            xAxis.title.fontWeight = "bold";
             var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            yAxis.title.text = "Average prices (DH)";
+            yAxis.title.fontWeight = "bold";
             yAxis.min = 0;
             
             function createSeries(value, name,color) {

@@ -23,6 +23,9 @@ $("#btex").click(function() {
   pr = coord.split("_")[3]
   console.log("lng2 " + lnggz +  ' lat2 : ' + ltgz  )
   calcRoute()
+  $('html,body').animate({
+    scrollTop: $("#map_canvas").offset().top},
+    'slow');
   //getstation(parseInt(lt),parseInt(lng))
   })
 $("#btes").click(function() {
@@ -33,7 +36,11 @@ $("#btes").click(function() {
   st = coord.split("_")[2]
   pr = coord.split("_")[3]
   console.log("lng2 " + lnggz +  ' lat2 : ' + ltgz  )
+  
   calcRoute()
+  $('html,body').animate({
+    scrollTop: $("#map_canvas").offset().top},
+    'slow');
   //getstation(parseInt(lt),parseInt(lng))
   })
 $("#btgz").click(function() {
@@ -45,6 +52,9 @@ st = coord.split("_")[2]
 pr = coord.split("_")[3]
 calcRoute()
 console.log("lng " + lnggz +  ' lat2 : ' + ltgz  )
+$('html,body').animate({
+  scrollTop: $("#map_canvas").offset().top},
+  'slow');
 //getstation(parseInt(lt),parseInt(lng))
 })
 function getLocation() {
