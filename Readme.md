@@ -8,11 +8,10 @@
 La page d'accueil contient une carte dans laquelle se trouve les meilleures stations au niveau des prix pour les trois types des carburants.
 
 
-<<<<<<< HEAD
 <img src="https://github.com/Redamslh/PriceCoomparison/blob/master/assets/img/pageAccueil.PNG" width="500">
-=======
+
 <img src="https://github.com/Redamslh/PriceCoomparison/blob/master/assets/img/pageAccueil.PNG" width="300" height="200">
->>>>>>> 39b2291a7e0dd2cf8d8f4495e031af7c148ef8a8
+
 
 > Affichge des Prix en temps reel
 
